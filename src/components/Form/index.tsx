@@ -6,6 +6,8 @@ import QRCode from "../QRCode";
 
 import Styles from "./Form.module.css";
 
+type FormData = { ["qrcode-text"]: string };
+
 const options: QRCodeGen.QRCodeToDataURLOptions = {
   type: "image/webp",
   scale: 8,
@@ -16,12 +18,12 @@ const options: QRCodeGen.QRCodeToDataURLOptions = {
 };
 
 export default function Form() {
-  const [qrCode, setQRCode] = useState("");
+  const [qrCode, setQRCode] = useState<string>();
   const inputId = useId();
 
-  const { register, handleSubmit } = useForm<{ ["qrcode-text"]: string }>();
+  const { register, handleSubmit } = useForm<FormData>();
 
-  const generateQR = (data: { ["qrcode-text"]: string }) => {
+  const generateQR = (data: FormData) => {
     QRCodeGen.toDataURL(data["qrcode-text"], options, (err, url) => {
       if (err) throw err;
       setQRCode(url);
@@ -30,7 +32,7 @@ export default function Form() {
 
   return (
     <>
-      {qrCode !== "" ? <QRCode codeURL={qrCode} /> : null}
+      {qrCode ? <QRCode codeURL={qrCode} /> : null}
       <h1 className={Styles.title}>Create a QR Code</h1>
       <form className={Styles.form} onSubmit={handleSubmit(generateQR)}>
         <label className={Styles.form__label} htmlFor={inputId}>

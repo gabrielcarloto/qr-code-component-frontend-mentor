@@ -11,6 +11,7 @@ specifiers:
   eslint: ^8.27.0
   eslint-plugin-astro: ^0.21.0
   eslint-plugin-jsx-a11y: ^6.6.1
+  html-to-image: ^1.10.8
   qrcode: ^1.5.1
   react: ^18.0.0
   react-dom: ^18.0.0
@@ -24,6 +25,7 @@ dependencies:
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   astro: 1.6.7
+  html-to-image: 1.10.8
   qrcode: 1.5.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2429,6 +2431,10 @@ packages:
 
   /html-escaper/3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
+    dev: false
+
+  /html-to-image/1.10.8:
+    resolution: {integrity: sha512-t+JyFJwKDCp4ZwBp4iC/wqw0meQDDc77Qs8OFl5P7RGlIP3LQMvwpD7VXxqQfC7/TfC+GKYlFP6WDYfXTmXHfw==}
     dev: false
 
   /html-void-elements/2.0.1:
