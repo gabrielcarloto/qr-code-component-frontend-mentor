@@ -1,16 +1,17 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import "@fontsource/outfit";
+
 import QRCode from "@assets/qr-code-component-image-qr-code.png";
+import "@fontsource/outfit/variable.css";
 ---
 
 <Layout title="QR Code Component">
   <body>
     <main>
       <div class="card">
-        <img src={QRCode} alt="QR Code" />
+        <img class="card__qr-code" src={QRCode} alt="QR Code" />
         <h1>Improve your front-end skills by building projects</h1>
-        <p>
+        <p class="card__text">
           Scan the QR code to visit Frontend Mentor and take your coding skills
           to the next level
         </p>
@@ -23,16 +24,53 @@ import QRCode from "@assets/qr-code-component-image-qr-code.png";
   :root {
     --background-color: rgb(212, 224, 238);
     --foreground-color: rgb(255, 255, 255);
-    --heading-color: rgb(23, 33, 48);
-    --text-color: rgb(151, 155, 159);
+    --heading-color: rgb(31, 49, 79);
+    --text-color: rgb(125, 136, 158);
   }
 
   body {
-    font-family: Outfit, sans-serif;
+    font-family: OutfitVariable, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: var(--text-color);
 
     width: 100vw;
     height: 100vh;
+    display: grid;
+    place-items: center;
 
     background-color: var(--background-color);
+  }
+
+  .card {
+    border-radius: 24px;
+    width: 280px;
+    padding: 16px 16px 40px;
+    display: grid;
+    gap: 16px;
+
+    background-color: var(--foreground-color);
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.048);
+  }
+
+  .card__qr-code {
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .card h1 {
+    color: var(--heading-color);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+
+    margin-top: 8px;
+  }
+
+  .card__text {
+    text-align: center;
+    padding: 0 8px;
   }
 </style>
