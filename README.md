@@ -23,8 +23,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H/hub/qr-code-page-built-with-astro-K7t1BwT6h3)
+- [Live Site](https://gabrielcarloto-qr-code.vercel.app)
 
 ## My process
 
