@@ -1,0 +1,23 @@
+.button {
+  background-color: var(--primary-color);
+
+  /* width: 100%; */
+  padding: 12px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+
+  font-family: OutfitVariable, sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--foreground-color);
+
+  transition: background 175ms ease-in-out, transform 25ms ease-out;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  cursor: pointer;
+}

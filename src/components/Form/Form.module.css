@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form__label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgb(84, 92, 107);
+}
+
+.form__input {
+  border: 2px solid rgb(125, 136, 158);
+  border-radius: 16px;
+  padding: 12px;
+
+  font-family: OutfitVariable, sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: rgb(125, 136, 158);
+}
+
+.form__input::placeholder {
+  font-size: 1.4rem;
+}
+
+.form__input:is(:hover, :focus, :focus-within) {
+  border-color: var(--button-color);
+}

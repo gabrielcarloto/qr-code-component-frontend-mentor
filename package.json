@@ -7,12 +7,20 @@
     "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro check && tsc --noEmit && astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --host",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^1.2.2",
     "@fontsource/outfit": "^4.5.10",
-    "astro": "^1.6.7"
+    "@types/qrcode": "^1.5.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^1.6.7",
+    "qrcode": "^1.5.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-hook-form": "^7.39.3"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.42.1",

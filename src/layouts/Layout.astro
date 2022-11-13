@@ -1,4 +1,6 @@
 ---
+import "@fontsource/outfit/variable.css";
+
 export interface Props {
   title: string;
 }
@@ -15,10 +17,19 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Frontend Mentor</title>
   </head>
-  <slot />
+  <body>
+    <slot />
+  </body>
   <style is:global>
     :root {
       font-size: 62.5%;
+
+      --background-color: rgb(212, 224, 238);
+      --foreground-color: rgb(255, 255, 255);
+      --heading-color: rgb(31, 49, 79);
+      --text-on-foreground: rgb(125, 136, 158);
+      --primary-color: rgb(44, 125, 250);
+      --primary-hover: rgb(54, 133, 255);
     }
 
     /**
@@ -77,6 +88,29 @@ const { title } = Astro.props;
       padding: 0;
       border-width: 0;
       border-style: solid;
+    }
+
+    body {
+      font-family: OutfitVariable, sans-serif;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      color: var(--text-on-foreground);
+
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+
+      background-color: var(--background-color);
+    }
+
+    h1 {
+      color: var(--heading-color);
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+      text-align: center;
     }
   </style>
 </html>

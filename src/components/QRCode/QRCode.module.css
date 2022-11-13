@@ -1,0 +1,47 @@
+.qr-code {
+  display: grid;
+  position: relative;
+  place-items: center;
+  border-radius: 16px;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+
+  background-color: var(--primary-color);
+}
+
+.qr-code::before {
+  content: "";
+  /* width: 50%; */
+  height: 200px;
+  display: block;
+  border-radius: 75%;
+  aspect-ratio: 1 / 1;
+
+  position: absolute;
+  left: -25%;
+  top: -25%;
+
+  background-color: var(--primary-hover);
+}
+
+.qr-code::after {
+  content: "";
+  /* width: 50%; */
+  height: 175px;
+  display: block;
+  border-radius: 40%;
+  aspect-ratio: 1 / 1;
+
+  transform: rotate(35deg);
+  position: absolute;
+  bottom: -30%;
+  right: -25%;
+
+  background-color: var(--primary-hover);
+}
+
+.qr-code>img {
+  width: 80%;
+  z-index: 1;
+}
