@@ -1,6 +1,5 @@
 ---
 import Button from "@components/Button";
-import Card from "@components/Card.astro";
 import Layout from "@layouts/Layout.astro";
 import QRCode from "@components/QRCode";
 
@@ -8,7 +7,6 @@ import QRCodeURL from "@assets/frontend-mentor.webp";
 ---
 
 <Layout title="QR Code Component">
-  <Card>
     <QRCode client:load codeURL={QRCodeURL} />
     <h1>Improve your front-end skills by building projects</h1>
     <p class="card__text">
@@ -16,7 +14,6 @@ import QRCodeURL from "@assets/frontend-mentor.webp";
       the next level
     </p>
     <Button as="a" href="/create">Create your QR Code</Button>
-  </Card>
 </Layout>
 
 <style>

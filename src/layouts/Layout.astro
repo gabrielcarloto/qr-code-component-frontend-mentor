@@ -18,7 +18,9 @@ const { title } = Astro.props;
     <title>{title} | Frontend Mentor</title>
   </head>
   <body>
-    <slot />
+    <main class="card">
+      <slot />
+    </main>
   </body>
   <style is:global>
     :root {
@@ -113,8 +115,29 @@ const { title } = Astro.props;
       text-align: center;
     }
 
+    /**
+     * CSS
+     */
+
     .transclude-shadow-container {
       display: none; /* fix for firefox */
     }
+
+    .card {
+    border-radius: 24px;
+    padding: 16px;
+    width: 80%;
+    display: grid;
+    gap: 16px;
+
+    background-color: var(--foreground-color);
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.06);
+  }
+
+  @media (min-width: 360px) {
+    .card {
+      width: 280px;
+    }
+  }
   </style>
 </html>
