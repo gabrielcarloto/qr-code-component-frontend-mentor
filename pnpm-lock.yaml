@@ -15,7 +15,6 @@ specifiers:
   qrcode: ^1.5.1
   react: ^18.0.0
   react-dom: ^18.0.0
-  react-hook-form: ^7.39.3
   typescript: ^4.8.4
 
 dependencies:
@@ -29,7 +28,6 @@ dependencies:
   qrcode: 1.5.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.39.3_react@18.2.0
 
 devDependencies:
   '@typescript-eslint/parser': 5.42.1_rmayb2veg2btbq6mbmnyivgasy
@@ -3667,15 +3665,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-hook-form/7.39.3_react@18.2.0:
-    resolution: {integrity: sha512-H/vwk1vBf+TiXuyW6+hWz+zCujiDO6NqHlN5sPE/a+NGKKGK95XTM65DZz3NmEgs2M20Wka+g4uv4VD367wDBA==}
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17 || ^18
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react/18.2.0:
