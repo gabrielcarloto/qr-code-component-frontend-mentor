@@ -1,13 +1,13 @@
-import type { ReactNode } from "react";
-import Style from "./Button.module.css";
+import type { ComponentChildren } from 'preact';
+import Style from './Button.module.css';
 
 interface Props {
-  as?: "a" | "button";
+  as?: 'a' | 'button';
   href?: string;
-  children: ReactNode;
+  children: ComponentChildren;
 }
 
-export default function Button({ as = "button", href, children }: Props) {
+export default function Button({ as = 'button', href, children }: Props) {
   const Element = as;
 
   return (

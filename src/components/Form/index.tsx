@@ -1,9 +1,12 @@
-import { useId, useState, useRef, FormEvent } from 'react';
+import { useId, useState, useRef } from 'preact/hooks';
+import type { TargetedEvent } from 'preact/compat';
 import * as QRCodeGen from 'qrcode';
 import Button from '../Button';
 import QRCode from '../QRCode';
 
 import Styles from './Form.module.css';
+
+type FormEvent = TargetedEvent<HTMLFormElement, Event>;
 
 const options: QRCodeGen.QRCodeToDataURLOptions = {
   type: 'image/webp',

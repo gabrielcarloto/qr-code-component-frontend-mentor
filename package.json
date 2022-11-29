@@ -11,19 +11,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^1.2.2",
+    "@astrojs/preact": "^1.2.0",
     "@fontsource/outfit": "^4.5.10",
-    "@types/qrcode": "^1.5.0",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
     "astro": "^1.6.7",
     "html-to-image": "^1.10.8",
-    "qrcode": "^1.5.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "preact": "^10.6.5",
+    "qrcode": "^1.5.1"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.42.1",
+    "@types/qrcode": "^1.5.0",
     "eslint": "^8.27.0",
     "eslint-plugin-astro": "^0.21.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
