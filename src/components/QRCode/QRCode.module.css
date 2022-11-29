@@ -46,6 +46,7 @@
 }
 
 .qr-code>img {
+  aspect-ratio: 1 / 1;
   width: 80%;
   z-index: 1;
 }
@@ -69,4 +70,5 @@
 
 .download>img {
   width: 25px;
+  aspect-ratio: 1 / 1;
 }
