@@ -1,16 +1,16 @@
-import { useId, useState, useRef, FormEvent } from "react";
-import * as QRCodeGen from "qrcode";
-import Button from "../Button";
-import QRCode from "../QRCode";
+import { useId, useState, useRef, FormEvent } from 'react';
+import * as QRCodeGen from 'qrcode';
+import Button from '../Button';
+import QRCode from '../QRCode';
 
-import Styles from "./Form.module.css";
+import Styles from './Form.module.css';
 
 const options: QRCodeGen.QRCodeToDataURLOptions = {
-  type: "image/webp",
+  type: 'image/webp',
   scale: 8,
   color: {
-    dark: "#ffffffff",
-    light: "00000000",
+    dark: '#ffffffff',
+    light: '00000000',
   },
 };
 
@@ -20,16 +20,15 @@ export default function Form() {
   const inputId = useId();
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-
   const generateQR = (e: FormEvent) => {
     e.preventDefault();
     const data = inputRef.current?.value;
 
     if (data) {
       QRCodeGen.toDataURL(data, options, (err, url) => {
-      if (err) throw err;
-      setQRCode(url);
-    });
+        if (err) throw err;
+        setQRCode(url);
+      });
     }
   };
 
@@ -42,7 +41,7 @@ export default function Form() {
           Text
         </label>
         <input
-          className={Styles["form__input"]}
+          className={Styles['form__input']}
           id={inputId}
           placeholder="Type in your text or url"
           required
